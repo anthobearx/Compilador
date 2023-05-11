@@ -1,0 +1,56 @@
+Vega //xd
+//soy un comentario
+
+//ciclos 
+for( int i!=2; i<=0; i++){ i=0}
+if( i==0){ i=7}
+for( int i!=2; i<=0; i++){ i=0}
+do{} while();
+
+//numeros
+123
+1 2 3
+999
+1000
+
+//Tipos de dato
+Int int INT
+Float float FLOAT
+Double double DOUBLE
+Long long LONG
+Boolean boolean BOOLEAN
+String string STRING
+Char char CHAR
+int hola = 100;
+
+//identificadores
+Hola
+hola
+Ñola
+áéíóú
+ÁÉÍÓÚ
+
+//caracteres /operadores validos
+/ * - +
+() {} []
+; _ 
+| & 
+<= != >= == = 
+
+//error cararcteres no validos (Error_0)
+$ # @ ¬ ¡ ¿  ° " % 
+. ^ ,
+
+//identificadores que no inicia con letra (Error_1)
+0Ña
+?Hola
+1HOLA
+@hola
+$Asxs
+_hola
+-hola
+
+//error 0 a la izquierda (Error_2)
+09 1 01 02
+00
+010

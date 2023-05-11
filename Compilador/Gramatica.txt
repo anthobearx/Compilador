@@ -1,0 +1,38 @@
+Gramatica de analizador lexico:
+1) <Program> ::= <Statement_list>
+
+2) <Statement_list> ::= <Statement> | <Statement> ";" <Statement>
+
+3) <Statement> ::= <Assign_statement> | <For> | <IF> | VACIO
+
+4) <Assign_statement> ::= <Identifier> "=" <Expression>
+
+5) <Expression>::= <Term>| <Term> <Add_op> <Expression>
+
+6) <Term> ::= <Factor> | <Factor> <Mult_op> <Term>
+
+7) <Factor> ::= <Identifier> | <Number> | "(" <Expression> ")"
+
+8) <Identifier> ::= <Letter> | <Identifier> <Letter> | <Identifier> <Digit> //palabra que siempre inicia con letra, no puede empezar con numeros
+
+9) <Number> ::= <Digit> | <Number> <Digit>
+
+10) <Add_op> ::= "+" | "-"
+
+11) <Mult_op> ::= "*" | "/"
+
+12) <Digit> ::= "[0-9]+";
+
+13) <Letter> ::= "[a-zA-Z]+";
+
+14) <For> ::= "for("<Tipo_dato> " " <Identifier> " " <Signo_comparacion> <Number>"; "<Identifier> <Signo_comparacion> <Number>"; " <Identifier><Aum_dec>") {" <Statement> "}"
+
+15) <IF> ::= "if(" <Identifier> <Signo_comparacion> <Identifier> "){" <Statement> "}"
+
+16) <Signo_comparacion> ::= "<" | ">" | ">=" | "<=" | "==" | "!="
+
+17) <Tipo_dato> ::= "int" | "double"
+
+-----------------------------------------------------------------------
+
+<>=no terminales
