@@ -1,0 +1,106 @@
+Gramatica de analizador lexico:
+1) Programa ::= <Lista_enunciados>*
+
+2) Lista_enunciados ::= <Enunciado>;
+
+3) Enunciado ::= <Declaracion> | <Asignacion> | <Autor> | PENDIENTES: <For> | <IF> | VACIO
+
+4) Declaracion ::= <Tipo_dato> <Identificador>
+
+5) Tipo_dato ::= <TipoNumerico> | <Tipo_dato_logico> | <Tipo_dato_string>  | <Tipo_dato_char>
+
+6) TipoNumerico ::= <Tipo_dato_int> | <Tipo_dato_float> | <Tipo_dato_double> | <Tipo_dato_long>
+
+7) Tipo_dato_int ::= "int" | "Int" | "INT"
+
+8) Tipo_dato_float ::= "float" | "Float" | "FLOAT"
+
+9) Tipo_dato_double ::= "double" | "Double" | "DOUBLE"
+
+10) Tipo_dato_long ::= "long" | "Long" | "LONG"
+
+11) Tipo_dato_logico ::= "boolean" | "Boolean" | "BOOLEAN"
+
+12) Tipo_dato_string := "string" | "String" | "STRING"
+
+13) Tipo_dato_char : = "char" | "Char" | "CHAR"
+
+14) Identificador::= <Letra> | <Identificador> <Letra> | <Identificador><Digito> 
+
+15) Letra ::= "[A-Za-zÑñ_ÁÉÍÓÚáéíóúÜü]+";
+
+16)  Numero = 0 | (<Digito1>+<Digito0>*)+
+
+17) Digito0 = [0-9]
+
+18) Digito1 = [1-9]
+
+19) Asignacion ::= <Asignacion_String> | <Asignacion_Boleana> | <Asignacion_Numerica>
+
+20) Asignacion_String ::= (<Tipo_dato_string> | <Tipo_dato_char>) Identificador <Igual> <Pesos> " " <Identificador> <Pesos>
+
+21) Igual ::= "="
+
+22) Pesos :: "$"
+
+23) Asignacion_Boleana ::= <Tipo_dato_logico> <Identificador> <Igual> <True_false>
+
+24) True_false ::= "true" | "false"
+
+25) Asignacion_Numerica ::= <TipoNumerico> <Igual> <ValorAsignable>
+
+26) ValorAsignable ::= <Numero> | <Corchete_abierto> " " <Identificador> <Corchete_cerrado> | PENDIENTE: <Parentesis_abierto><Expresion><Parentesis_cerrado>
+
+27) Autor ::= "vega" | "Vega" | "VEga" | "VEGa" | "VEGA" | "vEGA" | "veGA" | "vegA" | "vEGA" | "VeGA" | "VEgA" | "VEGa" | "VegA" | "vEGa" 
+
+28) Corchete_abierto ::= "["
+
+29) Corchete_cerrado ::= "]"
+
+30) Parentesis_abierto ::= "("
+
+31) Parentesis_cerrado := ")"
+
+32) Bracket_abrir ::= "{"
+
+33) Bracket_cerrar ::= "}"
+
+34) Expresion::= <Numero> | <Numero> <Operador_basico> <Expresion>
+
+35) Operador_basico ::= <Suma_op> | <Resta_op> | <Multiplicar_op> | <Dividir_op>
+
+36) Suma_op ::= "+"
+
+37) Resta_op ::= "-"
+
+38) Multiplicar_op ::= "*"
+
+39) Dividir_op :="/"
+
+
+40) For ::= "for" <Parentesis_abrir> 
+		<TipoNumerico> " " <Identificador> " " <Signo_comparacion> <Numero> <Punto_y_coma> " "
+		<Identificador> <Signo_comparacion> <Numero> <Punto_y_coma> " "
+		 <Identificador> <Aum_dec>
+	<Parentesis_cerrar> 
+	<Bracket_abrir> 
+		<Enunciado>
+	 <Bracket_cerrar>
+
+41) IF ::= "if" <Parentesis_abrir> 
+ 		(<Identificador> | <Valor_asignable>) <Signo_comparacion> <Identificador> 
+	<Parentesis_cerrar>
+	<Bracket_abrir>
+		 <Enunciado>
+	<Bracket_cerrar>
+
+42) Signo_comparacion ::= "<" | ">" | ">=" | "<=" | "==" | "!="
+
+43) Punto_y_coma ::= ";"
+
+44) Aum_dec ::= "++" | "--"
+
+
+-----------------------------------------------------------------------
+
+<>=no terminales

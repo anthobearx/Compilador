@@ -1,0 +1,12 @@
+int main(){
+int a = 0;
+
+if ()
+	{int a=0;
+	if (true){
+		int a=0;
+		while(true){
+			int b;
+		
+	}
+}}
